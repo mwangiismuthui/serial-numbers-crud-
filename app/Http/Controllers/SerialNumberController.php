@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\SerialNumber;
+use App\Models\SerialNumber;
 use Illuminate\Auth\Access\Gate;
 
 class SerialNumberController extends Controller
