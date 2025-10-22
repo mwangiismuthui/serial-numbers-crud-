@@ -4,6 +4,7 @@
 	        	</div>
 
 	        	<div class="form-group">
-	        		<label for="des">Password</label>
-	        		<textarea name="description" id="des" cols="20" rows="5" id='des' class="form-control"></textarea>
+	        		<label for="des">Description</label>
+	        		
+					<input type="text" name="description" id="" class="form-control">
 	        	</div>
