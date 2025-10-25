@@ -109,7 +109,8 @@
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2020 <a href="#">IntelligentSoftwares</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; {{ date('Y') }} <a href="http://zurilabsafrica.com/">Zuri Labs Africa</a>.</strong> All rights reserved.
+
   </footer>
 </div>
 

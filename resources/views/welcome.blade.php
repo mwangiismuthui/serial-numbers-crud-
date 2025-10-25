@@ -305,7 +305,7 @@
     
     <footer class="footer-copyright">
     	<div class="container">
-        	<p>© Copyright 2020 condororiental.com. All rights reserved.</p> <!-- copyright text -->
+        	<p>  &copy; Copyright {{ date('Y') }} condororiental.com. All rights reserved.</p> <!-- copyright text -->
 		</div> <!-- End container -->
 	</footer> <!-- End footer-copyright -->
     
