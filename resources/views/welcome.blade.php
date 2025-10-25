@@ -164,6 +164,7 @@
              <span id="form_result"></span>
             </div>
               <form  id="verify_form">
+                    @honeypot
                 {{ csrf_field() }}
                 
                 <div class="card-body">
@@ -219,8 +220,9 @@
              <span id="form_result"></span>
 
             </div>
-                         <form id="sendEmail" method="post">
-                
+            <form id="sendEmail" method="post">
+                    @honeypot
+
                 {{ csrf_field() }}
             	<div class="row">
                 	<div class="col-md-6">

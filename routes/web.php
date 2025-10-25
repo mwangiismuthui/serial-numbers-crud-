@@ -11,6 +11,7 @@
 |
 */
 
+use Spatie\Honeypot\ProtectAgainstSpam;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -31,9 +32,9 @@ Route::get('password/reset/{token}', [App\Http\Controllers\Auth\ResetPasswordCon
 Route::post('password/reset', [App\Http\Controllers\Auth\ResetPasswordController::class, 'reset']);
 
 Route::get('/our-gallery', [App\Http\Controllers\HomeController::class, 'galleryFront'])->name('gallery');
-Route::post('/Sendemail', [App\Http\Controllers\HomeController::class, 'Sendemail'])->name('Sendemail');
+Route::post('/Sendemail', [App\Http\Controllers\HomeController::class, 'Sendemail'])->name('Sendemail')->middleware(ProtectAgainstSpam::class);
 
-Route::post('/confirm_sno', [App\Http\Controllers\HomeController::class, 'confirm_sno'])->name('confirm_sno');
+Route::post('/confirm_sno', [App\Http\Controllers\HomeController::class, 'confirm_sno'])->name('confirm_sno')->middleware(ProtectAgainstSpam::class);
 
 Route::group(['middleware' => 'auth'], function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

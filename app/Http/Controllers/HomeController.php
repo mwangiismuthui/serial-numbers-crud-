@@ -100,11 +100,11 @@ class HomeController extends Controller
             ]);
         }
     }
-    public function send($data)
+   public function send($data)
     {
         Mail::send('mail.email', $data, function ($message) use ($data) {
-            $message->to('info@condororiental.com')->subject($data['topic']);
-            $message->from($data['email'], $data['fname'] . "" . $data['lname']);
+            $message->to('ceo@yokohama.si')->subject($data['topic']);
+            $message->from("ceo@yokohama.si", $data['fname'] . " " . $data['lname']);
         });
         return true;
     }
