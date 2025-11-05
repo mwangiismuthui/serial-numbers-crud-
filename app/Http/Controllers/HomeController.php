@@ -103,8 +103,8 @@ class HomeController extends Controller
    public function send($data)
     {
         Mail::send('mail.email', $data, function ($message) use ($data) {
-            $message->to('ceo@yokohama.si')->subject($data['topic']);
-            $message->from("ceo@yokohama.si", $data['fname'] . " " . $data['lname']);
+            $message->to('condororiental@gmail.com')->subject($data['topic']);
+            $message->from("ceo@condororiental.com", $data['fname'] . " " . $data['lname']);
         });
         return true;
     }
